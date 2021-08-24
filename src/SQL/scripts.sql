@@ -1,5 +1,5 @@
 -- DROP TABLE IF EXISTS public.products  CASCADE;
--- DROP TABLE IF EXISTS public.reviews  CASCADE;
+-- DROP TABLE IF EXISTS public.reviews ;
 
 
 CREATE TABLE IF NOT EXISTS public.products
@@ -20,8 +20,7 @@ CREATE TABLE IF NOT EXISTS public.reviews
     product_id integer NOT NULL,
     review text NOT NULL,
     rate integer NOT NULL,
-    created_at date NOT NULL,
-    review_id integer NOT NULL,
-    PRIMARY KEY (review_id)
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    review_id integer NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY
 );
 

@@ -5,20 +5,15 @@ import {
   editProduct,
   addProduct,
   deleteProduct,
-  addReview,
   addImageToTheProduct,
-  deleteReview,
-  getSingleMovie,
 } from "../../lib/service-actions.js";
+
 import {
   movieFieldsValidation,
   commentValidation,
 } from "../../lib/validations.js";
 import multer from "multer";
-import {
-  cloudinaryStorage,
-  createPDFPipeline,
-} from "../../lib/export-utils.js";
+import { cloudinaryStorage } from "../../lib/export-utils.js";
 
 const productsRouter = express.Router();
 
@@ -40,12 +35,5 @@ productsRouter.post(
   multer({ storage: cloudinaryStorage }).single("image_url"),
   addImageToTheProduct
 );
-
-//Reviews
-productsRouter.post("/:id/review", commentValidation, addReview);
-productsRouter.delete("/:id/review/:reviewID", deleteReview);
-
-// DownloadPDF
-productsRouter.get("/:id/pdf", createPDFPipeline);
 
 export default productsRouter;
