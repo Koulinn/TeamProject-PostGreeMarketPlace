@@ -101,8 +101,13 @@ export const deleteReview = async (req, res, next) => {
   }
 };
 
-export const addImageToTheCloud = async (req, res, next) => {
+export const addImageToTheProduct = async (req, res, next) => {
   try {
+    const product =
+      await db.query(`UPDATE public.products SET image_url = '${req.file.path}'
+      WHERE product_id=${req.params.product_id} RETURNING *;`);
+    console.log("product", product.rows[0]);
+    res.send(product.rows[0]);
   } catch (error) {
     console.log(error);
     next(error);
