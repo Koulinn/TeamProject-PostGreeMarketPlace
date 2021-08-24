@@ -4,7 +4,7 @@ import {
   getSingleProduct,
   editProduct,
   addProduct,
-  deleteMovie,
+  deleteProduct,
   addReview,
   addPosterToJSON,
   deleteReview,
@@ -31,7 +31,7 @@ productsRouter
 productsRouter
   .route("/:product_id")
   .put(editProduct)
-  .delete(deleteMovie)
+  .delete(deleteProduct)
   .get(getSingleProduct);
 
 // POSTER

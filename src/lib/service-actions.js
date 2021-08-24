@@ -64,17 +64,21 @@ export const addProduct = async (req, res, next) => {
     //prettier-ignore
     const product = await db.query(`INSERT INTO public.products(
             name, brand, image_url, description, price,category,updated_at)
-            VALUES ('${req.body.name}','${req.body.brand}','${req.body.image_url}','${req.body.description}','${req.body.price}','${req.body.category}','2000-12-25');`);
-    console.log("inside add product");
-    res.send("text from add product");
+            VALUES ('${req.body.name}','${req.body.brand}','${req.body.image_url}','${req.body.description}','${req.body.price}','${req.body.category}','2000-12-25') RETURNING *;
+            `);
+    res.status(201).send(product.rows[0]);
   } catch (error) {
     console.log(error);
     next(error);
   }
 };
 
-export const deleteMovie = async (req, res, next) => {
+export const deleteProduct = async (req, res, next) => {
   try {
+    const product = await db.query(
+      `DELETE FROM public.products WHERE product_id=${req.params.product_id};`
+    );
+    res.status(204).send();
   } catch (error) {
     console.log(error);
     next(error);
