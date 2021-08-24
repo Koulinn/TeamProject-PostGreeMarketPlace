@@ -29,10 +29,12 @@ export const getAllProducts = async (req, res, next) => {
   }
 };
 
-export const checkMovieOnJSON = async (req, res, next) => {
+export const getSingleProduct = async (req, res, next) => {
   try {
-    // const moviesList = await getJSONMovies();
-    // res.send(moviesList);
+    const product = await db.query(
+      `SELECT * FROM public.products WHERE product_id=${req.params.product_id};`
+    );
+    res.send(product.rows[0]);
   } catch (error) {
     console.log(error);
     next(error);

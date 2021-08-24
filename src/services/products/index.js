@@ -1,7 +1,7 @@
 import express from "express";
 import {
   getAllProducts,
-  checkMovieOnJSON,
+  getSingleProduct,
   editMovieText,
   addProduct,
   deleteMovie,
@@ -29,10 +29,10 @@ productsRouter
   .post(addProduct);
 
 productsRouter
-  .route("/:id")
+  .route("/:product_id")
   .put(editMovieText)
   .delete(deleteMovie)
-  .get(getSingleMovie);
+  .get(getSingleProduct);
 
 // POSTER
 productsRouter.post(
