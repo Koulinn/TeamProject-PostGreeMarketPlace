@@ -1,0 +1,147 @@
+[
+    {
+        "_id": "SERVER GENERATED ID",
+        "category": "ARTICLE CATEGORY",
+        "title": "ARTICLE TITLE",
+        "cover": "ARTICLE COVER (IMAGE LINK)",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "AUTHOR AVATAR NAME",
+            "avatar": "AUTHOR AVATAR LINK"
+        },
+        "content": "HTML",
+        "createdAt": "NEW DATE"
+    },
+    {
+        "_id": "1f6ntfafgks7j6cs9",
+        "category": "ARTICLE CATEGORY",
+        "title": "ARTICLE TITLE",
+        "cover": "ARTICLE COVER (IMAGE LINK)",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "Random Lazy",
+            "avatar": "AUTHOR AVATAR LINK"
+        },
+        "content": "asjdjksahda asjkdhk jahdas asdj adas dasd ad adas",
+        "createdAt": "2021-08-11T13:30:59.768Z"
+    },
+    {
+        "_id": "123456",
+        "category": "ARTICLE CATEGORY",
+        "title": "new case",
+        "cover": "ARTICLE COVER (IMAGE LINK)",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "Random Lazy",
+            "avatar": "AUTHOR AVATAR LINK"
+        },
+        "content": "HTML",
+        "createdAt": "NEW DATE",
+        "updatedAt": "2021-08-11T14:09:01.632Z"
+    },
+    {
+        "_id": "1f6ntfdp8ks7vazj9",
+        "content": "<p>asdasdasdasdas</p>",
+        "cover": "linkurl hardcoded",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "hardCoded",
+            "avatar": "hardCoded"
+        },
+        "title": "title",
+        "category": "cat3",
+        "createdAt": "2021-08-11T19:10:31.268Z"
+    },
+    {
+        "_id": "1f6ntfhx8ks7vcnuf",
+        "content": "<p>asdasdasdasdasgfds</p>",
+        "cover": "linkurl hardcoded",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "hardCoded",
+            "avatar": "hardCoded"
+        },
+        "title": "title",
+        "category": "cat3",
+        "createdAt": "2021-08-11T19:11:49.430Z"
+    },
+    {
+        "_id": "1f6ntf4g4ks8jo0ix",
+        "category": "ARTICLE CATEGORY",
+        "title": "ARTICLE TITLE",
+        "cover": "ARTICLE COVER (IMAGE LINK)",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "AUTHOR AVATAR NAME",
+            "avatar": "AUTHOR AVATAR LINK"
+        },
+        "createdAt": "2021-08-12T06:32:29.864Z",
+        "content": "sadasdasd"
+    },
+    {
+        "_id": "1f6ntf2b0ks7v3g46",
+        "content": "<p>text askdjaskdjask<strong>jdas asda das </strong>asd</p>",
+        "cover": "http://localhost:3001/1f6ntf2b0ks7v3g46.png",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "hardCoded",
+            "avatar": "hardCoded"
+        },
+        "title": "random title",
+        "category": "cat2",
+        "createdAt": "2021-08-11T19:04:39.509Z"
+    },
+    {
+        "_id": "1f6ntf9fkksdcbowc",
+        "category": "ARTICLE CATEGORY",
+        "title": "ARTICLE TITLE",
+        "cover": "ARTICLE COVER (IMAGE LINK)",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "AUTHOR AVATAR NAME",
+            "avatar": "AUTHOR AVATAR LINK"
+        },
+        "content": "sadasdasd",
+        "createdAt": "2021-08-15T15:05:48.491Z"
+    },
+    {
+        "_id": "1f6ntf3skksdcbvlf",
+        "category": "ARTICLE CATEGORY",
+        "title": "ARTICLE TITLE",
+        "cover": "ARTICLE COVER (IMAGE LINK)",
+        "readTime": {
+            "value": 2,
+            "unit": "minute"
+        },
+        "author": {
+            "name": "AUTHOR AVATAR NAME",
+            "avatar": "AUTHOR AVATAR LINK"
+        },
+        "content": "",
+        "createdAt": "2021-08-15T15:05:57.170Z"
+    }
+]
