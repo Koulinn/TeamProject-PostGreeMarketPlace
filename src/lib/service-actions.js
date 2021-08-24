@@ -41,8 +41,18 @@ export const getSingleProduct = async (req, res, next) => {
   }
 };
 
-export const editMovieText = async (req, res, next) => {
+export const editProduct = async (req, res, next) => {
   try {
+    const product =
+      await db.query(`UPDATE public.products SET name ='${req.body.name}',
+			 brand = '${req.body.brand}',
+			 image_url = '${req.body.image_url}',
+			 description = '${req.body.description}',
+             price = '${req.body.price}',
+             category = '${req.body.category}',
+             updated_at = '2000-12-25'
+             WHERE product_id=${req.params.product_id} RETURNING *;`);
+    res.send(product.rows[0]);
   } catch (error) {
     console.log(error);
     next(error);

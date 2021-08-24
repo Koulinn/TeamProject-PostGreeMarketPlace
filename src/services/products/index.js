@@ -2,7 +2,7 @@ import express from "express";
 import {
   getAllProducts,
   getSingleProduct,
-  editMovieText,
+  editProduct,
   addProduct,
   deleteMovie,
   addReview,
@@ -30,7 +30,7 @@ productsRouter
 
 productsRouter
   .route("/:product_id")
-  .put(editMovieText)
+  .put(editProduct)
   .delete(deleteMovie)
   .get(getSingleProduct);
 
