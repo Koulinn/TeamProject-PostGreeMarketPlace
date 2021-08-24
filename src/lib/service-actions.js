@@ -101,7 +101,7 @@ export const deleteReview = async (req, res, next) => {
   }
 };
 
-export const addPosterToJSON = async (req, res, next) => {
+export const addImageToTheCloud = async (req, res, next) => {
   try {
   } catch (error) {
     console.log(error);

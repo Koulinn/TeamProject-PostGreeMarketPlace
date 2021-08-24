@@ -6,7 +6,7 @@ import {
   addProduct,
   deleteProduct,
   addReview,
-  addPosterToJSON,
+  addImageToTheCloud,
   deleteReview,
   getSingleMovie,
 } from "../../lib/service-actions.js";
@@ -36,9 +36,9 @@ productsRouter
 
 // POSTER
 productsRouter.post(
-  "/:id/poster",
-  multer({ storage: cloudinaryStorage }).single("Poster"),
-  addPosterToJSON
+  "/:id/image",
+  multer({ storage: cloudinaryStorage }).single("image_url"),
+  addImageToTheCloud
 );
 
 //Reviews
