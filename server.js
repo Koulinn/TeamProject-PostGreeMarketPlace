@@ -1,31 +1,36 @@
-import express from 'express'
-import cors from 'cors'
-import {corsConfig, requestSpeedLimiter} from './lib/server-config.js'
-import mediaRouter from './services/media/index.js'
-import { notFoundErrorHandler, badRequestErrorHandler, serverErrorHandler, forbiddenRequest } from './lib/error-Handlers.js'
+import express from "express";
+import cors from "cors";
+import { corsConfig, requestSpeedLimiter } from "./src/lib/server-config.js";
+import productsRouter from "./src/services/products/index.js";
+import {
+  notFoundErrorHandler,
+  badRequestErrorHandler,
+  serverErrorHandler,
+  forbiddenRequest,
+} from "./src/lib/error-Handlers.js";
+import createTables from "./src/db/scripts/create-tables.js";
 
+const server = express();
 
-const server = express()
-
-
-server.use(requestSpeedLimiter)
-server.use(express.json())
-server.use(cors(corsConfig))
-server.use('/media', mediaRouter)
-
+// server.use(requestSpeedLimiter);
+server.use(express.json());
+server.use(cors(corsConfig));
+server.use("/products", productsRouter);
 
 // Errors middlewares
-server.use(notFoundErrorHandler)
-server.use(forbiddenRequest)
-server.use(badRequestErrorHandler)
-server.use(serverErrorHandler)
+server.use(notFoundErrorHandler);
+server.use(forbiddenRequest);
+server.use(badRequestErrorHandler);
+server.use(serverErrorHandler);
 
+const port = process.env.PORT;
+server.listen(port, async () => {
+  try {
+    await createTables();
+    console.log("Server running port = " + port);
+  } catch (error) {
+    console.log(error);
+  }
+});
 
-
-
-const port = process.env.PORT
-server.listen(port, ()=>{
-    console.log('Server running port = ' + port)
-})
-
-server.on('error', (err)=> console.log(err))
+server.on("error", (err) => console.log(err));
