@@ -9,7 +9,7 @@ const createTables = async () => {
     const sqlCommandBuffer = await fs.readFile(sqlFilePath);
     const sqlCommandStringified = sqlCommandBuffer.toString();
 
-    // await db.query(sqlCommandStringified);
+    await db.query(sqlCommandStringified);
     console.log("table created");
   } catch (error) {
     console.log(error);
