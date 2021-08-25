@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { corsConfig, requestSpeedLimiter } from "./src/lib/server-config.js";
 import productsRouter from "./src/services/products/index.js";
+import reviewRouter from "./src/services/reviews/reviews.js";
 import {
   notFoundErrorHandler,
   badRequestErrorHandler,
@@ -16,7 +17,7 @@ const server = express();
 server.use(express.json());
 server.use(cors(corsConfig));
 server.use("/products", productsRouter);
-
+server.use("/reviews", reviewRouter);
 // Errors middlewares
 server.use(notFoundErrorHandler);
 server.use(forbiddenRequest);
